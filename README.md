@@ -9,7 +9,7 @@ git clone https://github.com/OTAKKATO/leechking
 
 NpmJS:
 ```
-npm i express-rate-limit mongodb compression express helmet path
+npm i express-rate-limit mongodb compression express helmet path dotenv
 ```
 
 ## Usage
