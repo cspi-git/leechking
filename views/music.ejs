@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta charset="UTF-8">
+
+        <title>Leech King</title>
+    </head>
+    <body>
+        <!-- Dependencies -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/css/uikit.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="/resources/index.css">
+
+        <!-- Main -->
+        <div align="center">
+            <div class="uk-position-left" style="margin-left: 1%; top: 2%;">
+                <h4 class="lk-title" style="color: white;">Leech King</h4>
+            </div>
+
+            <div class="uk-position-right lk-nav">
+                <a href="/">Home</a>
+            </div>
+        </div>
+
+        <div class="uk-position-center" style="position: relative; top: 15vh;">
+            <h2 style="color: white;">Music</h2>
+        </div>
+
+        <div class="uk-position-left" style="margin-left: 1%; position: relative; top: 23vh; width: 50%;">
+            <table class="table table-color">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                 <tbody>
+                    <% accounts.forEach((account)=>{ %>
+                        <tr>
+                            <td><%= account.name %></td>
+                            <td><%= account.date %></td>
+                            <td><a href="<%= account.link %>">Download</a></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+              </table>
+        </div>
+    </body>
+</html>
